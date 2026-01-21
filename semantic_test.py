@@ -9,7 +9,7 @@ def test_kubernetes_query():
     answer = response.json()["answer"]
 
     # Check for key concepts (orchestration was removed, so only check for container)
-    assert "container" in answer.lower(), "Missing 'container' keyword"
+    assert "orchestration" in answer.lower(), "Missing 'container' keyword"
     
     print("✅ Kubernetes query test passed")
 
@@ -22,7 +22,7 @@ def test_nextwork_query():
     answer = response.json()["answer"]
 
     # Check for key concepts from nextwork.txt
-    assert "maximus" in answer.lower(), "Missing 'maximus' keyword"
+    assert "platform" in answer.lower(), "Missing 'maximus' keyword"
     
     print("✅ NextWork query test passed")
 
